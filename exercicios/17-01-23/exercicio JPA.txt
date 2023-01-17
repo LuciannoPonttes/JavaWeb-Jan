@@ -1,0 +1,14 @@
+1 - Criar um projeto com a seguinte estrura:
+
+	MAVEN
+	JPA
+	SPRING MVC
+2 - Criar uma model para persistir no banco:
+	Professor
+		matricula
+		nome
+		idade
+3 - Conectar a aplicação com o mySql
+	Usando Hibernate
+
+

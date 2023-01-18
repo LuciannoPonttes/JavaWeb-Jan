@@ -12,10 +12,10 @@ import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
-@Configuration
+@Configuration// Indico para o Spring Container que essa é uma classe de configuração
 public class DataConfiguration {
 
-	@Bean
+	@Bean// Esse metodo vai ser gerenciado(instanciado, "chamado") pelo Spring Container
 	public DataSource dataSource() {
 		DriverManagerDataSource driveBanco = new DriverManagerDataSource(); // Cria o drive que recebe os paremetros de conexão com o banco
 		driveBanco.setDriverClassName("com.mysql.cj.jdbc.Driver");// Indica qual drive sera usado para a conexão com o banco

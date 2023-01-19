@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import cadastroAluno.cadastroAluno.model.Aluno;
 import cadastroAluno.cadastroAluno.repository.AlunoRepository;
+import cadastroAluno.cadastroAluno.service.AlunoService;
+
 
 @RestController//é um controller
 @RequestMapping("/api")
@@ -36,6 +38,10 @@ public class AlunoController {
 	
 	@PostMapping("/cadastraAluno")
 	public void cadastrarAluno(@RequestBody Aluno aluno) {
+		
+		AlunoService alunoService = new AlunoService();
+		
+		aluno.setValorBolsa(alunoService.calcularBolsa(aluno.getQtdHora(), aluno.getValorHora()));
 		alunoRepository.save(aluno);
 	}
 	 

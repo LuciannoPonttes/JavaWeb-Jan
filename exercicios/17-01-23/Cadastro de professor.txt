@@ -23,3 +23,16 @@
 
 5 - Calcular o salario atraves de um serviço
 
+6 - Criar a seguinte entidade:
+
+	Turma:
+		Codigo
+		Nome
+		salaDeAula
+
+7 - Relacionar a entidade professor com a entidade turma, onde:
+
+	Um professor tem uma ou  varias turmas e uma turma tem somente um professor
+			
+
+8 - Realizar CRUD completo da entidade Turma

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	
+<body>
+
+	<div th:each="aluno : ${aluno}">
+	
+		<form method="post">
+			<div>
+				Codigo: <input type="text" th:value="${aluno.codigo}" readonly="readonly" />
+			</div>
+			
+			<div>
+			Nome: <input  type="text" th:value="${aluno.nome}" name="nome"/>
+		</div>
+		
+		<div>
+			Idade: <input  type="text" th:value="${aluno.idade}" name="idade"/>
+		</div>
+		
+		
+		<div>
+			Valor da Hora: <input  type="text" th:value="${aluno.valorHora}" name="valorHora"/>
+		</div>
+		
+		
+		
+		<div>
+			Quantidade de Horas: <input  type="text" th:value="${aluno.qtdHora}" name="qtdHora"/>
+		</div>
+		
+		
+		
+	
+		<button type="submit">Alterar</button>
+		
+		</form>
+	
+	
+	
+	</div>
+
+</body>
+</html>

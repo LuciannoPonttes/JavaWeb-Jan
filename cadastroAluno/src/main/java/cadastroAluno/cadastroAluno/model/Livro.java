@@ -17,7 +17,7 @@ public class Livro {
 	
 	private String nome;
 	
-	@ManyToOne
+	@ManyToOne // Indica que um livro tem somente um aluno.
 	private Aluno aluno;
 
 	public long getCodigo() {

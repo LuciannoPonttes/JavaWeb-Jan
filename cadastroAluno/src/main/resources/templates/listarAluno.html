@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Lista de Alunos</title>
+	</head>
+	<body>
+
+	<h1>Tabela de Alunos</h1>
+	
+	
+	<table class="container">
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Idade</th>
+				<th>Valor da Hora</th>
+				<th>Quantidade de horas</th>
+				<th>Valor da Bolsa</th>
+			<tr>
+		</thead>
+		<tbody>
+			<tr th:each="aluno : ${alunos}">
+				<td><span th:text="${aluno.nome}" ></span></td>
+				<td><span th:text="${aluno.idade}" ></span></td>
+				<td><span th:text="${aluno.valorHora}" ></span></td>
+				<td><span th:text="${aluno.qtdHora}" ></span></td>
+				<td><span th:text="${aluno.valorBolsa}" ></span></td>
+					
+			<tr>
+		
+		</tbody>
+	
+	</table>	
+	
+	
+	
+	
+	
+	
+	</body>
+</html>

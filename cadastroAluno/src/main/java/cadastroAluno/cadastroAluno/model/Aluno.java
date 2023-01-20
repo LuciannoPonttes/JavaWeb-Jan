@@ -26,7 +26,7 @@ public class Aluno {
 	
 	private double valorBolsa;
 	
-	@OneToMany
+	@OneToMany//Indica que um aluno pode ter um ou mais livros
 	private List<Livro> livros;
 	
 

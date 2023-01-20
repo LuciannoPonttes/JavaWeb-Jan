@@ -27,6 +27,7 @@ public class LivroController {
 	LivroRepository livroRepository;
 	
 	
+	// Recebe através do URL o codigo do aluno e a informações do livro através do body
 	@PostMapping("/cadastrarLivro/{codigo}")
 	public void cadastrarLivro(@RequestBody Livro livro, @PathVariable long codigo) {
 		livro.setAluno(alunoRepository.findById(codigo));

@@ -10,7 +10,8 @@ import org.springframework.web.servlet.ModelAndView;
 import cadastroAluno.cadastroAluno.model.Aluno;
 import cadastroAluno.cadastroAluno.repository.AlunoRepository;
 import cadastroAluno.cadastroAluno.service.AlunoService;
-import ch.qos.logback.core.model.Model;
+
+
 
 @Controller
 public class AlunoControllerMono {
@@ -57,6 +58,15 @@ public class AlunoControllerMono {
 		alunoRepository.save(aluno);
 		
 		
+		
+		return "redirect:/listaDeAlunos";
+	}
+	
+	@RequestMapping("/deletarAluno")
+	public String deletarAluno(long codigo) {
+		Aluno aluno = alunoRepository.findById(codigo);
+		
+		alunoRepository.delete(aluno);
 		
 		return "redirect:/listaDeAlunos";
 	}

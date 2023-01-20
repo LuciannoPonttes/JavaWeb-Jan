@@ -12,21 +12,25 @@
 	<table class="container">
 		<thead>
 			<tr>
+				<th>Codigo</th>
 				<th>Nome</th>
 				<th>Idade</th>
 				<th>Valor da Hora</th>
 				<th>Quantidade de horas</th>
 				<th>Valor da Bolsa</th>
+					<th>Deletar</th>
+				
 			<tr>
 		</thead>
 		<tbody>
 			<tr th:each="aluno : ${alunos}">
+				<td><span th:text="${aluno.codigo}" ></span></td>
 				<td><span th:text="${aluno.nome}" ></span></td>
 				<td><span th:text="${aluno.idade}" ></span></td>
 				<td><span th:text="${aluno.valorHora}" ></span></td>
 				<td><span th:text="${aluno.qtdHora}" ></span></td>
 				<td><span th:text="${aluno.valorBolsa}" ></span></td>
-					
+				<td><a   th:href="${(#mvc.url('ACM#deletarAluno').arg(0, aluno.codigo)).build()}">Deletar</a></td>
 			<tr>
 		
 		</tbody>

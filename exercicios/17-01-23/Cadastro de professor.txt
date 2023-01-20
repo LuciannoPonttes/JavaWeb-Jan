@@ -38,3 +38,5 @@
 8 - Realizar CRUD completo da entidade Turma
 
 9 - Criar uma Controller e uma View para listar e registrar professor
+
+10 - Adicionar o campo deletar na tabela

@@ -23,13 +23,8 @@ public class AlunoControllerMono {
 	AlunoRepository alunoRepository;
 	
 	
+
 	@RequestMapping("/")
-	public String indexMetodo() {
-		
-		return "index";
-	}
-	
-	@RequestMapping("/listaDeAlunos")
 	public ModelAndView listarAlunoMetodo() {
 		
 		ModelAndView modelAndViewAluno = new ModelAndView("listarAluno");
@@ -62,7 +57,7 @@ public class AlunoControllerMono {
 		
 		
 		
-		return "redirect:/listaDeAlunos";
+		return "redirect:/";
 	}
 	
 	@RequestMapping("/deletarAluno")
@@ -71,7 +66,7 @@ public class AlunoControllerMono {
 		
 		alunoRepository.delete(aluno);
 		
-		return "redirect:/listaDeAlunos";
+		return "redirect:/";
 	}
 	
 	@RequestMapping(value ="/{codigo}", method = RequestMethod.GET)
@@ -95,7 +90,7 @@ public class AlunoControllerMono {
 		aluno.setValorBolsa(alunoService.calcularBolsa(aluno.getQtdHora(), aluno.getValorHora()));
 		
 		alunoRepository.save(aluno);
-		return "redirect:/listaDeAlunos";
+		return "redirect:/";
 	}
 	
 	

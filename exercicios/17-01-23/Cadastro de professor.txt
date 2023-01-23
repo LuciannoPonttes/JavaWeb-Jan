@@ -42,3 +42,5 @@
 10 - Adicionar o campo deletar na tabela
 
 11 - Finalizar o CRUD completo da entidade professor
+
+12 - "Refinar" o seu front-end utilizando css e bootStrap

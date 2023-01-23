@@ -4,15 +4,16 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	</head>
 	
 <body>
 
-	<div th:each="aluno : ${aluno}">
+	<div th:each="aluno : ${aluno}" class="container">
 	
 		<form method="post">
 			<div>
-				Codigo: <input type="text" th:value="${aluno.codigo}" readonly="readonly" />
+				Codigo: <input type="text" th:value="${aluno.codigo}" readonly="readonly" class="codigo-css" />
 			</div>
 			
 			<div>
@@ -40,6 +41,12 @@
 		<button type="submit">Alterar</button>
 		
 		</form>
+		
+		
+		
+		
+		
+
 	
 	
 	

@@ -3,32 +3,108 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Insert title here</title>
+		
+		
 	</head>
 	<body>
 
 	<form class="container" method="post">
 		<div>
-			Nome: <input  type="text" value="" name="nome"/>
+			<p class="paragrafo1">Nome</p> <br>
+			<input  type="text" value="" class="nomeEstilo" name="nome"/>
 		</div>
 		
 		<div>
-			Idade: <input  type="text" value="" name="idade"/>
+			<p class="paragrafo2">Idade</p> <br>
+			<input  type="text" value="" name="idade" class="idadeEstilo"/>
 		</div>
 		
 		<div>
-			Quantidade de Horas: <input  type="text" value="" name="qtdHora"/>
+			<p class="paragrafo3">Quantidade de Hora</p> <br>
+			 <input  type="text" value="" name="qtdHora" class="qtdHoraEstilo"/>
 		</div>
 		
 		<div>
-			Valor da Hora: <input  type="text" value="" name="valorHora"/>
+			<p class="paragrafo4">Valor da Hora</p> <br>
+			<input  type="text" value="" name="valorHora" class="valorHoraEstilo"/>
 		</div>
+		<br>
 		
 		
 	
-		<button type="submit">Enviar</button>
+		<button class="botao" type="submit">Enviar</button>
 
 	</form>
 
-
 	</body>
+	
+	
+	<style>
+		
+		.container{
+			width: 400px;
+			margin-left: auto;
+			margin-right:auto;
+			
+			
+		}
+		
+		input[type=text]{
+			width: 50%;
+			
+		
+		}
+		
+		.nomeEstilo{
+			background-color: blue;
+		}
+	
+		.idadeEstilo{
+			background-color: red;
+		
+		}
+		
+		.qtdHoraEstilo{
+			background-color: green;
+		}
+		
+		.valorHoraEstilo{
+			background-color: purple;
+		
+		}
+		
+		.paragrafo1{
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		
+		.paragrafo2{
+			font-family: "Lucida Console", "Courier New", monospace;
+		
+		}
+		
+		.paragrafo3{
+			font: 15px Arial, sans-serif;
+		
+		}
+		
+		.paragrafo4{
+			font: italic small-caps bold 12px/30px Georgia, serif;
+		
+		}
+		
+		.botao{
+			background-color: #4682B4;
+			cursor: pointer;
+			border-radius: 12px;
+			padding: 32px 16px;
+		
+		
+		}
+	
+	
+	
+	</style>
+	
+	
+
 </html>

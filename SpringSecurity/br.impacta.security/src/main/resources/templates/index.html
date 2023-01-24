@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>mwhyte.dev - Welcome!</title>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+    <body>
+        <h1 th:inline="text">Olá [[${#httpServletRequest.remoteUser}]]!</h1>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sair"/>
+        </form>
+    </body>
+</html>

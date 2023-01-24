@@ -1,0 +1,13 @@
+Criar um projeto do "zero" com duas paginas:
+
+	Pagina 1  -> Login
+	Pagina 2 - > Index
+
+A index só pode ser acessada se o usuario estiver logado!  
+
+
+
+
+
+########################DESAFIO###########################
+Permitir que o usuario realize cadastro para logar; 

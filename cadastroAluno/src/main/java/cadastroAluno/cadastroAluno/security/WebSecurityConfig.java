@@ -17,7 +17,7 @@ public class WebSecurityConfig {
 		
 		http // objeto do tipo HttpSecurity 
 		.authorizeRequests() // Autorização para qualquer Requisição 
-		.antMatchers("/css/**", "/images/**", "/favicon.ico").permitAll() // Permite acesso as pastas css e images para todos que estão logados
+		.antMatchers("/css/**", "/images/**").permitAll() // Permite acesso as pastas css e images para todos que estão logados
 		.anyRequest().authenticated()// Indica que será necessario logar na aplicação 
 		.and() // Conexão de instruções
 		.formLogin()//Indica que terá uma pagina com formulario de Login

@@ -24,6 +24,13 @@
 		<div class="collapse navbar-collapse" id="navbarNav"
 			style="background: #4682B4">
 			<ul class="navbar-nav">
+				
+				<li>
+					 <form th:action="@{/logout}" method="post">
+            			<input type="submit" value="Sair"/>
+        			</form>
+				</li>
+				
 				<li class="nav-item"><a class="nav-link" href="/"
 					style="color: white">Inicio</a></li>
 				<li class="nav-item"><a class="nav-link" href="/cadastrarAluno"

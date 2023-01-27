@@ -19,8 +19,8 @@ public class DataConfiguration {
 	public DataSource dataSource() {
 		DriverManagerDataSource driveBanco = new DriverManagerDataSource(); // Cria o drive que recebe os paremetros de conexão com o banco
 		driveBanco.setDriverClassName("com.mysql.cj.jdbc.Driver");// Indica qual drive sera usado para a conexão com o banco
-		driveBanco.setUrl("jdbc:mysql://localhost:3306/db_aluno");// Inidia a url para acessar o banco
-		driveBanco.setUsername("root");// usuario do banco
+		driveBanco.setUrl("jdbc:mysql://172.19.96.1:3306/db_aluno");// Inidia a url para acessar o banco
+		driveBanco.setUsername("luciano");// usuario do banco
 		driveBanco.setPassword("root");// senha do banco
 		
 		return driveBanco;

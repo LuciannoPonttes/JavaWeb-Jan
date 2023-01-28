@@ -1,7 +1,11 @@
 package cadastroAluno.cadastroAluno.security;
 
+import javax.transaction.Transactional;
+
+import org.aspectj.weaver.ast.And;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -9,6 +13,7 @@ import org.springframework.security.web.SecurityFilterChain;
 
 
 @Configuration
+@Transactional
 public class WebSecurityConfig {
 
 	
@@ -16,9 +21,8 @@ public class WebSecurityConfig {
 	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 		
 		http // objeto do tipo HttpSecurity 
-		.authorizeRequests() // Autorização para qualquer Requisição 
-		.antMatchers("/css/**", "/images/**").permitAll() // Permite acesso as pastas css e images para todos que estão logados
-		.anyRequest().authenticated()// Indica que será necessario logar na aplicação 
+		.authorizeRequests().antMatchers(HttpMethod.POST).permitAll()
+        
 		.and() // Conexão de instruções
 		.formLogin()//Indica que terá uma pagina com formulario de Login
 		.loginPage("/login")// Indica a pagina HTML que será usada para o Login
@@ -26,12 +30,19 @@ public class WebSecurityConfig {
 		.permitAll() // Todos os Usuarios logodos possuem permissão para acessar a Index
 		.and() // Conexão de instruções
 		.logout()//Indica que a aplicação terá logout
-		.permitAll();//Permite que todos logados podem fazer logout
+		.permitAll().and()
+		.csrf().disable();//Permite que todos logados podem fazer logout
     return http.build();
 		
 	}
 	
 	
+	private Object authorizeRequests() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
 	@Bean
 	public PasswordEncoder passwordEncoder() {
 		return new BCryptPasswordEncoder();

@@ -15,9 +15,9 @@ import cadastroAluno.cadastroAluno.model.Livro;
 import cadastroAluno.cadastroAluno.repository.AlunoRepository;
 import cadastroAluno.cadastroAluno.repository.LivroRepository;
 
-@RestController
-@RequestMapping("/api")
-@CrossOrigin // para permitir que outras aplicações acesse essa controller
+//@RestController
+//@RequestMapping("/api")
+//@CrossOrigin // para permitir que outras aplicações acesse essa controller
 public class LivroController {
 
 	@Autowired

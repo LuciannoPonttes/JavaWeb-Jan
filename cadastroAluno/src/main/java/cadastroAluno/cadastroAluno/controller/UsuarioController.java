@@ -67,6 +67,30 @@ public class UsuarioController {
 	}
 	
 	
+	@RequestMapping(value ="usuarioEditar/{login}", method = RequestMethod.GET)
+	public ModelAndView editarUsuarioGet(@PathVariable("login") String login) {
+		
+		Usuario usuario = usuarioRepository.findByLogin(login);
+		ModelAndView modelAndViewUAndView = new ModelAndView("editarUsuario");
+		modelAndViewUAndView.addObject("usuario", usuario);
+		
+		
+		return modelAndViewUAndView;
+	}
+	
+	
+	@RequestMapping(value ="usuarioEditar/{login}", method = RequestMethod.POST)
+	public String editarUsuarioPost(Usuario usuario) {
+		
+		usuario.setSenha(new BCryptPasswordEncoder().encode(usuario.getSenha()));
+		
+		
+		usuarioRepository.save(usuario);
+		
+		
+		return "redirect:/gerenciarUsuario";
+	}
+	
 	
 	
 	

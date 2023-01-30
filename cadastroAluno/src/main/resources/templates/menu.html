@@ -1,0 +1,23 @@
+
+<div th:fragment="navbar">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	
+	
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+					<li class="nav-item"><a class="nav-link" href="/cadastrarAluno">Cadastrar aluno</a></li>
+					<li class="nav-item"><a class="nav-link" href="/gerenciarUsuario">Gerenciar Usuario</a></li>
+	
+					</li>
+				</ul>
+				<div style="margin-left: 1500px">
+					<form th:action="@{/logout}" method="post">
+	
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sair</button>
+					</form>
+					<div></div>
+		</nav>	
+</div>
+
+

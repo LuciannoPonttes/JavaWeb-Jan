@@ -46,3 +46,7 @@
 12 - "Refinar" o seu front-end utilizando css e bootStrap
 
 13 - Adicionar Login e executar o deploy no docker.
+
+14 - Implementa o CRUD  do usuario. 
+
+15 - Cadastrar a turma atraves do de uma pagina HTML(Thyme Leaf) relacionando ao professor escolhido.

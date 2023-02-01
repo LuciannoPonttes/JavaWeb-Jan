@@ -20,14 +20,6 @@ public class Livro {
 	@ManyToOne // Indica que um livro tem somente um aluno.
 	private Aluno aluno;
 
-	public long getCodigo() {
-		return codigo;
-	}
-
-	public void setCodigo(long codigo) {
-		this.codigo = codigo;
-	}
-
 	public String getNome() {
 		return nome;
 	}
@@ -42,7 +34,19 @@ public class Livro {
 
 	public void setAluno(Aluno aluno) {
 		this.aluno = aluno;
-	} 
+	}
+
+	public long getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(long codigo) {
+		this.codigo = codigo;
+	}
+
+
+
+	
 	
 	
 	

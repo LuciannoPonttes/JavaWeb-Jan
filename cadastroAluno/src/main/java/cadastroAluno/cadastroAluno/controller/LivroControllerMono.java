@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 import cadastroAluno.cadastroAluno.model.Aluno;
 import cadastroAluno.cadastroAluno.model.Livro;
 import cadastroAluno.cadastroAluno.repository.AlunoRepository;
+import cadastroAluno.cadastroAluno.repository.LivroRepository;
 
 @Controller
 public class LivroControllerMono {
@@ -17,10 +18,21 @@ public class LivroControllerMono {
 	@Autowired // Objeto sera instanciado e gerenciado pelo Spring Container
 	AlunoRepository alunoRepository;
 	
+	@Autowired
+	LivroRepository livroRepository;
+	
 	@RequestMapping(value ="cadastrarLivro/{codigo}", method = RequestMethod.GET)
 	public ModelAndView cadastrarLivroMetodo(@PathVariable("codigo") long codigo) {
 		Aluno aluno = alunoRepository.findById(codigo);
+		
 		ModelAndView modelAndViewAluno = new ModelAndView("cadastrarLivro");
+		
+		Iterable<Livro> livros  = livroRepository.findByAluno(aluno);
+		
+		
+		
+		
+		modelAndViewAluno.addObject("livros", livros);
 		modelAndViewAluno.addObject("aluno", aluno);
 		return modelAndViewAluno;
 		
@@ -28,7 +40,16 @@ public class LivroControllerMono {
 	
 	@RequestMapping(value ="cadastrarLivro/{codigo}", method = RequestMethod.POST)
 	public String cadastrarLivroMetodoPost(@PathVariable("codigo") long codigo, Livro livro) {
-		return "redirect:/";
+		
+		livro.setAluno(alunoRepository.findById(codigo));
+		
+		livroRepository.save(livro);
+		
+		
+		
+		
+		
+		return "redirect:/cadastrarLivro/{codigo}";
 		
 	}
 	

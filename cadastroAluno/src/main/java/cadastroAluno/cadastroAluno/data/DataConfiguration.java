@@ -19,9 +19,9 @@ public class DataConfiguration {
 	public DataSource dataSource() {
 		DriverManagerDataSource driveBanco = new DriverManagerDataSource(); // Cria o drive que recebe os paremetros de conexão com o banco
 		driveBanco.setDriverClassName("com.mysql.cj.jdbc.Driver");// Indica qual drive sera usado para a conexão com o banco
-		driveBanco.setUrl("jdbc:mysql://localhost:3306/db_aluno");// Inidia a url para acessar o banco
-		driveBanco.setUsername("root");// usuario do banco
-		driveBanco.setPassword("root");// senha do banco
+		driveBanco.setUrl("jdbc:mysql://bsi63szouo9n08es7udj-mysql.services.clever-cloud.com/bsi63szouo9n08es7udj");// Inidia a url para acessar o banco
+		driveBanco.setUsername("uj2q8k8hanbdp0d4");// usuario do banco
+		driveBanco.setPassword("SZKvVCR5ozx5wQlipmaD");// senha do banco
 		
 		return driveBanco;
 	}
